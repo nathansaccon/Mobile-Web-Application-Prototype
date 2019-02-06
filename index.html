@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/lib/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/lib/jquery-2.1.4.min.js"></script>
+    <script src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page" id="nsHomePage">
+
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>NS Feedback A1</h1>
+            <nav data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a data-theme="a" data-icon="home" href="#" class="ui-button-active ui-state-persist">Home</a></li>
+                    <li><a data-theme="a" data-icon="plus" href="#nsAddFeedbackPage">Add</a></li>
+                    <li><a data-theme="a" data-icon="grid" href="#nsViewFeedbackPage">Reviews</a></li>
+                    <li><a data-theme="a" data-icon="gear" href="#nsSettingsPage">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div role="main" class="ui-content">
+            <h2>Nathan Saccon Feedback A1 App</h2>
+
+            <p>Welcome to Nathan Saccon's Feedback A1 app. A prototype designed for mobile programming class. This is
+                the first iteration of the app to keep track of different places you visited along with your reviews.</p>
+            <img style="margin:auto; display:block" src="img/ns-icon.png" alt="Rocket">
+            <p>Please feel free to contact me if you have any suggestions!</p>
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Call: 999-1111-2222</a>
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">nsaccon9163@conestogac.on.ca</a>
+            Website:
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Conestoga College</a>
+        </div><!-- /content -->
+
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>&copy; 2019 Nathan Saccon</h4>
+        </footer>
+    </div><!-- Home Page -->
+
+
+
+
+
+
+    <div data-role="page" id="nsAddFeedbackPage">
+
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Add A Feedback</h1>
+            <nav data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a data-theme="a" data-icon="home" href="#nsHomePage">Home</a></li>
+                    <li><a data-theme="a" data-icon="plus" href="#" class="ui-button-active ui-state-persist">Add</a></li>
+                    <li><a data-theme="a" data-icon="grid" href="#nsViewFeedbackPage">Reviews</a></li>
+                    <li><a data-theme="a" data-icon="gear" href="#nsSettingsPage">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <div role="main" class="ui-content">
+
+            <form>
+                <label for="text-1">Business Name:</label>
+                <input type="text" name="text-1" id="nsName" value="">
+
+                <label for="text-1">Reviewer Email:</label>
+                <input type="text" name="text-1" id="nsEmail" value="">
+
+                <label for="textarea-1">Reviewer Comments:</label>
+                <textarea name="textarea-1" id="nsComments"></textarea>
+
+                <label for="number-1">Overall Ratings (1-100)</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="nsRating" value=""><br>
+            </form>
+            <button data-inline="true" id="nsSave">Save</button>
+        </div><!-- /content -->
+
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>&copy; 2019 Nathan Saccon</h4>
+        </footer>
+    </div><!-- Add Feedback Page -->
+
+
+
+
+
+
+
+
+    <div data-role="page" id="nsViewFeedbackPage">
+
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>List of Reviews</h1>
+            <nav data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a data-theme="a" data-icon="home" href="#nsHomePage">Home</a></li>
+                    <li><a data-theme="a" data-icon="plus" href="#nsAddFeedbackPage">Add</a></li>
+                    <li><a data-theme="a" data-icon="grid" href="#" class="ui-button-active ui-state-persist">Reviews</a></li>
+                    <li><a data-theme="a" data-icon="gear" href="#nsSettingsPage">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <div role="main" class="ui-content">
+
+            <ul data-role="listview" data-inset="true" id="nsFeedbackList">
+                <li data-icon="false"><a href="#nsEditFeedbackPage">
+                        <h2>Business Name: Tim Whoretons</h2>
+                        <p>Reviewer Email: abc@defg.com</p>
+                        <p>Comments: I don't go here for the coffee</p>
+                        <p>Overall Rating: 69%</p>
+                    </a></li>
+                <li data-icon="false"><a href="#nsEditFeedbackPage">
+                        <h2>Business Name: Bob's Truck Rental</h2>
+                        <p>Reviewer Email: abc@defg.com</p>
+                        <p>Comments: Great!</p>
+                        <p>Overall Rating: 90%</p>
+                    </a></li>
+            </ul>
+
+        </div><!-- /content -->
+
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>&copy; 2019 Nathan Saccon</h4>
+        </footer>
+    </div><!-- View Feedback Page -->
+
+
+
+
+
+
+
+    <div data-role="page" id="nsEditFeedbackPage">
+
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Modify Feedback</h1>
+            <nav data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a data-theme="a" data-icon="home" href="#nsHomePage">Home</a></li>
+                    <li><a data-theme="a" data-icon="plus" href="#nsAddFeedbackPage">Add</a></li>
+                    <li><a data-theme="a" data-icon="grid" href="#nsViewFeedbackPage" class="ui-button-active ui-state-persist">Reviews</a></li>
+                    <li><a data-theme="a" data-icon="gear" href="#nsSettingsPage">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <div role="main" class="ui-content">
+            <form>
+                <label for="text-1">Business Name:</label>
+                <input type="text" name="text-1" id="nsName" value="Tim Whoretons">
+
+                <label for="text-1">Reviewer Email:</label>
+                <input type="text" name="text-1" id="nsEmail" value="abc@defg.com">
+
+                <label for="textarea-1">Reviewer Comments:</label>
+                <textarea name="textarea-1" id="nsComments">I don't go here for the coffee</textarea>
+
+                <label for="number-1">Overall Ratings (1-100)</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="nsRating" value="69"><br>
+
+
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <button href="#" id="nsCancel" class="ui-btn ui-corner-all" data-role="button" data-theme="e">Cancel</button>
+                <button href="#" id="nsDelete" class="ui-btn ui-corner-all ui-btn-b" data-role="button" data-theme="a">Delete</button>
+                <button href="#" id="nsUpdate" class="ui-btn ui-corner-all" data-role="button" data-theme="b">Update</button>
+            </div>
+
+        </div><!-- /content -->
+
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>&copy; 2019 Nathan Saccon</h4>
+        </footer>
+    </div><!-- Edit Feedback Page -->
+
+
+
+
+
+
+
+
+
+    <div data-role="page" id="nsSettingsPage">
+
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Settings</h1>
+            <nav data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a data-theme="a" data-icon="home" href="#nsHomePage">Home</a></li>
+                    <li><a data-theme="a" data-icon="plus" href="#nsAddFeedbackPage">Add</a></li>
+                    <li><a data-theme="a" data-icon="grid" href="#nsViewFeedbackPage">Reviews</a></li>
+                    <li><a data-theme="a" data-icon="gear" href="#" class="ui-button-active ui-state-persist">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <div role="main" class="ui-content">
+
+            <form>
+                <label for="text-1">Default Reviewer Email:</label>
+                <input type="text" name="text-1" id="nsDefaultEmail">
+            </form>
+            <button id="nsSaveDefaults" class="ui-btn ui-corner-all ui-btn-c" data-theme="b">Save Defaults</button>
+            <button id="nsClearDatabase" class="ui-btn ui-corner-all ui-btn-b">Clear Database</button>
+
+        </div><!-- /content -->
+
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>&copy; 2019 Nathan Saccon</h4>
+        </footer>
+    </div><!-- Settings Page -->
+
+
+</body>
+
+</html>
